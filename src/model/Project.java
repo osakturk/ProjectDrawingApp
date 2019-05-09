@@ -6,13 +6,12 @@ import java.util.List;
 public class Project {
     private Long   id;
     private String name;
-    // image ??
-    /**
-     * We need to learn how can we create an image properties ? Is this only location or not?
-     * */
+
+
     private Date   createDate;
     private Integer status;
-    private List<Alarm> alarmList;
+    private List<Sensor> sensorList;
+    private byte[] planImage;
 
     public Long getId() {
         return id;
@@ -46,11 +45,11 @@ public class Project {
         this.status = status;
     }
 
-    public List<Alarm> getAlarmList() {
-        return alarmList;
+    public List<Sensor> getSensorList() {
+        return sensorList;
     }
 
-    public void setAlarmList(List<Alarm> alarmList) {
-        this.alarmList = alarmList;
+    public void setSensorList(List<Sensor> sensorList) {
+        this.sensorList = sensorList;
     }
 }

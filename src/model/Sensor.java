@@ -2,13 +2,15 @@ package model;
 
 import java.util.Date;
 
-public class Alarm {
+public class Sensor {
+
     private Long id;
     private String level;
     private String label;
+
     private Date setTime;
-    private String xLocation;
-    private String yLocation;
+    private double xLocation;
+    private double yLocation;
     private Long projectId;
 
     public Long getId() {
@@ -43,19 +45,19 @@ public class Alarm {
         this.setTime = setTime;
     }
 
-    public String getxLocation() {
+    public double getxLocation() {
         return xLocation;
     }
 
-    public void setxLocation(String xLocation) {
+    public void setxLocation(double xLocation) {
         this.xLocation = xLocation;
     }
 
-    public String getyLocation() {
+    public double getyLocation() {
         return yLocation;
     }
 
-    public void setyLocation(String yLocation) {
+    public void setyLocation(double yLocation) {
         this.yLocation = yLocation;
     }
 
