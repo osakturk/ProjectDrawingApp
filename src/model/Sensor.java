@@ -7,11 +7,12 @@ public class Sensor {
     private Long id;
     private String level;
     private String label;
-
+    private String description;
     private Date setTime;
     private double xLocation;
     private double yLocation;
     private Long projectId;
+    private int type;
 
     public Long getId() {
         return id;
@@ -31,6 +32,14 @@ public class Sensor {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setLevel(String level) {
@@ -67,5 +76,13 @@ public class Sensor {
 
     public void setProjectId(Long projectId) {
         this.projectId = projectId;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }
