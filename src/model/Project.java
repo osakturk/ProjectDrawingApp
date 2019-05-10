@@ -52,4 +52,12 @@ public class Project {
     public void setSensorList(List<Sensor> sensorList) {
         this.sensorList = sensorList;
     }
+
+    public byte[] getPlanImage() {
+        return planImage;
+    }
+
+    public void setPlanImage(byte[] planImage) {
+        this.planImage = planImage;
+    }
 }
