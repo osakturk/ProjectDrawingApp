@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProjectRepository extends BaseRepository{
+public class ProjectRepository extends BaseRepository {
     public List<Project> getProjectList(){
         List<Project> projectList = new ArrayList<>();
         ArrayList<Object> parameters = new ArrayList<>();
