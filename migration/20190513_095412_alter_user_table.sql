@@ -1,0 +1,1 @@
+ALTER TABLE Users ADD COLUMN locale VARCHAR(15) AFTER phone_2;
