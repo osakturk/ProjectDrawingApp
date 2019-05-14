@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minWidth="220.0" styleClass="sidebar" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SideBarController">
+    <children>
+        <VBox fx:id="uiContainer" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="768.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <children>
+                <FontAwesomeIconView fill="#828fa8" glyphName="BELL_SLASH" size="60">
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </FontAwesomeIconView>
+                <Label fx:id="uiVersionInfoLabel" alignment="CENTER" layoutX="10.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="172.0" textFill="#b8b1b1">
+                    <styleClass>
+                        <String fx:value="ctext-yellow" />
+                        <String fx:value="ctext-small" />
+                    </styleClass>
+                </Label>
+                <HBox id="navMain" fx:id="uiProjectsBtn" alignment="CENTER_LEFT" layoutX="10.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="sidebar-btn">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <children>
+                        <FontAwesomeIconView glyphName="DASHBOARD" size="1.2em" styleClass="sidebar-btn-icon" />
+                        <Label text="PROJECTS" textFill="#b8b1b1">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox id="navEmployees" fx:id="uiNewProjectBtn" alignment="CENTER_LEFT" layoutX="10.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="sidebar-btn">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <children>
+                        <FontAwesomeIconView glyphName="PLUS" size="1.2em" styleClass="sidebar-btn-icon" />
+                        <Label text="NEW PROJECT" textFill="#b8b1b1">
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox id="navEmpWorks" fx:id="uiLogsBtn" alignment="CENTER_LEFT" layoutX="10.0" layoutY="128.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="sidebar-btn">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <children>
+                        <FontAwesomeIconView glyphName="LIST_OL" size="1.2em" styleClass="sidebar-btn-icon" />
+                        <Label text="LOGS" textFill="#b8b1b1">
+
+                            <HBox.margin>
+                                <Insets left="15.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <HBox alignment="TOP_CENTER" spacing="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <HBox fx:id="uiSettingsBtn" styleClass="sidebar-no-text-btn">
+                    <children>
+                        <FontAwesomeIconView glyphName="GEAR" size="15" styleClass="sidebar-no-text-btn-icon" />
+                    </children>
+                </HBox>
+                <HBox fx:id="uiUserBtn" layoutX="10.0" layoutY="10.0" styleClass="sidebar-no-text-btn">
+                    <children>
+                        <FontAwesomeIconView glyphName="USER" size="15" styleClass="sidebar-no-text-btn-icon" />
+                    </children>
+                </HBox>
+                <HBox fx:id="uiAboutBtn" layoutX="141.0" layoutY="10.0" styleClass="sidebar-no-text-btn">
+                    <children>
+                        <FontAwesomeIconView glyphName="INFO" size="15" styleClass="sidebar-no-text-btn-icon" />
+                    </children>
+                </HBox>
+                <HBox fx:id="uiLogoutBtn" layoutX="47.0" layoutY="10.0" styleClass="sidebar-no-text-btn">
+                    <children>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="15" styleClass="sidebar-no-text-btn-icon" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
