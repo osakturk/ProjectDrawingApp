@@ -1,0 +1,126 @@
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-box-border: transparent;
+    -fx-padding:0;
+
+}
+.scroll-pane  {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-box-border: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-box-border: transparent;
+    -fx-background-color: transparent;
+}
+.button {
+    -fx-cursor:hand;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+}
+.text{
+    -fx-font-smoothing-type: gray;
+}
+.label {
+    -fx-font-smoothing-type: gray;
+    -fx-font-weight:bold;
+}
+.main-bg-color {
+    -fx-background-color: #222b2e;
+}
+
+.lbl-white {
+    -fx-text-fill:#fff;
+}
+.lbl-gray {
+    -fx-text-fill:#d3d3d3;
+}
+
+.lbl-h1 {
+    -fx-font-size:26;
+}
+.lbl-h2 {
+    -fx-font-size:22;
+}
+.lbl-h3 {
+    -fx-font-size:18;
+}
+.lbl-h4 {
+    -fx-font-size:16;
+}
+.lbl-h5 {
+    -fx-font-size:13;
+}
+.lbl-small {
+    -fx-font-size:9;
+}
+
+
+/* side bar styles */
+.sidebar{
+    -fx-background-color:   linear-gradient(#1d272e 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#1d272e, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(52, 51, 51, 0.9), rgba(255,255,255,0));
+}
+.sidebar-user-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+}
+
+.sidebar-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+    -fx-cursor:hand;
+}
+.sidebar-btn:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #b8b1b1;
+    -fx-border-color: #163e4d;
+    -fx-border-width: 0px 0px 0px 5px;
+}
+
+/*.sidebar-btn:pressed .label{ // bug var, ilk butona basıldıgında unpressed haline dönmüyor renk
+    -fx-background-color: transparent;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #163e4d;
+}*/
+.sidebar-btn:pressed .sidebar-btn-icon{
+    -fx-fill: #23647a;
+}
+
+.sidebar-btn-icon{
+    -fx-fill: #b8b1b1;
+}
+
+.sidebar-no-text-btn {
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+    -fx-padding:10;
+    -fx-background-radius: 5px;
+}
+.sidebar-no-text-btn:hover {
+    -fx-background-color: #163e4d;
+}
+.sidebar-no-text-btn-icon{
+    -fx-fill: #b8b1b1;
+}
+
+
+/* Content controller styles */
+.content-container {
+    -fx-background-color:   linear-gradient(#0a1015 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#0a1015, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(35, 44, 47, 0.9), rgba(255,255,255,0));
+    -fx-padding:10;
+}
+
+.content-container .title {
+
+}
