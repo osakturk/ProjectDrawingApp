@@ -13,6 +13,9 @@
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
             </resource>
+            <resource>
+                <directory>${basedir}/src/main/java/resources</directory>
+            </resource>
         </resources>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <plugins>
@@ -45,5 +48,12 @@
             </plugin>
         </plugins>
     </build>
-
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/de.jensd/fontawesomefx -->
+        <dependency>
+            <groupId>de.jensd</groupId>
+            <artifactId>fontawesomefx</artifactId>
+            <version>8.9</version>
+        </dependency>
+    </dependencies>
 </project>
