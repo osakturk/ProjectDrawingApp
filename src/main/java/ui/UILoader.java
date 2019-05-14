@@ -14,7 +14,7 @@ public class UILoader {
         try {
             // load fxml layouts
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/"+fxmlName+".fxml"));
+            loader.setLocation(getClass().getResource("/fxml/"+fxmlName+".fxml"));
             UI = loader.load();
             controller = loader.getController();
         } catch( IOException e ){

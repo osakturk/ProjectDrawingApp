@@ -12,14 +12,14 @@ public class MainScreen extends Application {
     public void start(Stage primaryStage) throws Exception{
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/sample/res/fxml/test.fxml"));
+            loader.setLocation(getClass().getResource("/fxml/main_screen.fxml"));
             Parent content = loader.load();
             primaryStage.setTitle("Project Drawing App");
 
 
 
             //Map<String, Double> resData = Common.calculateAppWindowSize();
-            primaryStage.setScene(new Scene(content, 1024, 768 ));
+            primaryStage.setScene(new Scene(content, 1280, 1024 ));
 
             //stage.getIcons().add(new Image(getClass().getResource("/gpts/res/img/gpts_ico.png").toExternalForm()));
             primaryStage.show();
