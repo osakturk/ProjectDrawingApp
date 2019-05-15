@@ -124,3 +124,34 @@
 .content-container .title {
 
 }
+
+.titled-pane.s1 > .title {
+    -fx-background-color:   linear-gradient(#293034 30%, #181f24 100%);
+
+}
+.titled-pane.s1 > .title .text {
+    -fx-fill:#d3d3d3;
+}
+.titled-pane.s1:focused > .title {
+    -fx-color: -fx-focus-color;
+}
+.titled-pane.s1 > *.content {
+    -fx-background-color: #14171c;
+}
+.titled-pane.s1 .split-pane-divider {
+    -fx-background-color:#292f33;
+    -fx-border:none;
+}
+
+.project-thumb {
+    -fx-cursor:hand;
+    -fx-background-color:#000;
+    -fx-background-radius: 3;
+}
+
+.project-thumb .image-view {
+    -fx-opacity:0.3;
+}
+.project-thumb:hover .image-view {
+    -fx-opacity:0.5;
+}
