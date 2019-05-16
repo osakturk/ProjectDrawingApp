@@ -14,7 +14,7 @@ public class UIComponent {
 
     }
 
-    public UIComponent( String fxmlName ){
+    public void loadFXML( String fxmlName ){
         try {
             // load fxml layouts
             FXMLLoader loader = new FXMLLoader();
