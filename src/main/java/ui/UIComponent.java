@@ -5,12 +5,16 @@ import javafx.scene.Node;
 
 import java.io.IOException;
 
-public class UILoader {
+public class UIComponent {
 
-    private Object controller;
-    private Node UI;
+    protected Object controller;
+    protected Node UI;
 
-    public UILoader( String fxmlName ){
+    public UIComponent(){
+
+    }
+
+    public UIComponent( String fxmlName ){
         try {
             // load fxml layouts
             FXMLLoader loader = new FXMLLoader();
