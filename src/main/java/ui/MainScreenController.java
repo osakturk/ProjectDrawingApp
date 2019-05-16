@@ -2,8 +2,11 @@ package ui;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -15,22 +18,20 @@ import java.util.ResourceBundle;
 public class MainScreenController implements Initializable {
 
 
-    private AnchorPane uiSideBar;
-    private ScrollPane uiContentContainer;
-
-    public static ScrollPane UICONTENTMAIN;
-
-    @FXML
-    private StackPane uiWrapper;
+    @FXML private StackPane uiWrapper;
     @FXML private AnchorPane uiContentWrapper;
-    @FXML private AnchorPane uiPopupWOverlay;
+    @FXML private VBox uiPopupOverlay;
     @FXML private VBox uiPopup;
+
+    private AnchorPane uiSideBar;
+    public static ScrollPane CONTENT_CONTAINER;
+    public static StackPane WRAPPER;
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb ){
         try {
-
 
             SideBar sideBar = new SideBar();
             ContentContainer contentContainer = new ContentContainer();
@@ -39,20 +40,23 @@ public class MainScreenController implements Initializable {
             contentContainer.initUI();
 
             uiSideBar = (AnchorPane)sideBar.getUI();
-            uiContentContainer = (ScrollPane)contentContainer.getUI();
+            CONTENT_CONTAINER = (ScrollPane)contentContainer.getUI();
+            WRAPPER = uiWrapper;
 
             uiContentWrapper.getChildren().add( uiSideBar );
             AnchorPane.setLeftAnchor(uiSideBar, 0.0);
             AnchorPane.setTopAnchor(uiSideBar, 0.0);
             AnchorPane.setBottomAnchor(uiSideBar, 0.0);
 
-            uiContentWrapper.getChildren().add( uiContentContainer );
-            AnchorPane.setLeftAnchor(uiContentContainer, 220.0);
-            AnchorPane.setRightAnchor(uiContentContainer, 0.0);
-            AnchorPane.setTopAnchor(uiContentContainer, 0.0);
-            AnchorPane.setBottomAnchor(uiContentContainer, 0.0);
+            uiContentWrapper.getChildren().add( CONTENT_CONTAINER );
+            AnchorPane.setLeftAnchor(CONTENT_CONTAINER, 220.0);
+            AnchorPane.setRightAnchor(CONTENT_CONTAINER, 0.0);
+            AnchorPane.setTopAnchor(CONTENT_CONTAINER, 0.0);
+            AnchorPane.setBottomAnchor(CONTENT_CONTAINER, 0.0);
 
-
+            // initalize popup
+            Popup.setContent(uiPopup);
+            Popup.setOverlay(uiPopupOverlay);
 
 
         } catch( Exception e ){
@@ -60,6 +64,8 @@ public class MainScreenController implements Initializable {
         }
     }
 
+
+    // @todo - debounce the event ??
     public void screenResizeAction(){
         uiContentWrapper.getScene().heightProperty().addListener(new ChangeListener<Number>() {
             @Override public void changed(ObservableValue<? extends Number> observableValue, Number oldSceneHeight, Number newSceneHeight) {
