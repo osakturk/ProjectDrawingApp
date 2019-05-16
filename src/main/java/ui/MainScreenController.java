@@ -38,8 +38,8 @@ public class MainScreenController implements Initializable {
             sideBar.initUI();
             contentContainer.initUI();
 
-            uiSideBar = sideBar.getUI();
-            uiContentContainer = contentContainer.getUI();
+            uiSideBar = (AnchorPane)sideBar.getUI();
+            uiContentContainer = (ScrollPane)contentContainer.getUI();
 
             uiContentWrapper.getChildren().add( uiSideBar );
             AnchorPane.setLeftAnchor(uiSideBar, 0.0);
