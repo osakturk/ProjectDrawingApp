@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -10,6 +11,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -19,7 +21,7 @@
     <content>
         <VBox fx:id="uiContentContainer">
             <children>
-                <Label fx:id="uiTitle" text="Project Explorer">
+                <Label fx:id="uiTitle" text="Projects">
                     <styleClass>
                         <String fx:value="title" />
                         <String fx:value="lbl-white" />
@@ -31,7 +33,7 @@
                 </Label>
                 <VBox>
                     <children>
-                        <TitledPane animated="false" styleClass="s1" text="Projects">
+                        <TitledPane animated="false" styleClass="s1" text="Project Explorer">
                             <content>
                                 <SplitPane dividerPositions="0.5" orientation="VERTICAL">
                                     <items>
@@ -99,6 +101,57 @@
                                 </SplitPane>
                             </content>
                         </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="10.0" styleClass="s1" text="Project Viewer - Active Project Name">
+                     <content>
+                        <SplitPane orientation="VERTICAL">
+                           <items>
+                              <VBox alignment="TOP_CENTER" spacing="15.0">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <children>
+                                    <VBox alignment="CENTER" fillWidth="false">
+                                       <children>
+                                          <Label text="Kitchen">
+                                             <styleClass>
+                                                <String fx:value="lbl-gray" />
+                                                <String fx:value="lbl-h3" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label text="Last updated: 11:49">
+                                             <styleClass>
+                                                <String fx:value="lbl-gray" />
+                                                <String fx:value="lbl-small" />
+                                             </styleClass>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                    <HBox alignment="CENTER" spacing="15.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" text="Edit">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="PENCIL" />
+                                             </graphic>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Logs">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="HISTORY" />
+                                             </graphic>
+                                          </Button>
+                                          <Button mnemonicParsing="false" text="Notes">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="LIST" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </items>
+                        </SplitPane>
+                     </content>
+                  </TitledPane>
                     </children>
                 </VBox>
             </children>
