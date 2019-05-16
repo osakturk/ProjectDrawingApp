@@ -55,8 +55,7 @@ public class MainScreenController implements Initializable {
             AnchorPane.setBottomAnchor(CONTENT_CONTAINER, 0.0);
 
             // initalize popup
-            Popup.setContent(uiPopup);
-            Popup.setOverlay(uiPopupOverlay);
+            Popup.initialize( uiPopupOverlay, uiPopup );
 
 
         } catch( Exception e ){

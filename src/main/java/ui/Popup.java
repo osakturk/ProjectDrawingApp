@@ -8,9 +8,7 @@ import javafx.scene.layout.VBox;
 
 public class Popup {
 
-    private static VBox popupOverlay;
-    private static VBox content;
-
+    private static VBox POPUP_OVERLAY, POPUP_CONTENT, LOADER_CONTENT;
 
     public static void show(){
         MainScreenController.WRAPPER.getChildren().setAll(reverseElems());
@@ -18,6 +16,12 @@ public class Popup {
 
     public static void hide(){
         MainScreenController.WRAPPER.getChildren().setAll(reverseElems());
+        POPUP_CONTENT.getChildren().clear();
+    }
+
+    public static void showLoader(){
+        setContent( LOADER_CONTENT );
+        show();
     }
 
     private static ObservableList<Node> reverseElems(){
@@ -28,11 +32,17 @@ public class Popup {
         return newList;
     }
 
-    public static void setContent( VBox _content ){
-        content = _content;
+
+    public static void initialize( VBox overlay, VBox content  ){
+        POPUP_OVERLAY = overlay;
+        POPUP_CONTENT = content;
+        PopupLoaderContent popupLoaderContent = new PopupLoaderContent();
+        LOADER_CONTENT = (VBox)popupLoaderContent.getUI();
     }
-    public static void setOverlay( VBox _overlay ){
-        popupOverlay = _overlay;
+
+    public static void setContent( Node content ){
+        POPUP_CONTENT.getChildren().add(content);
     }
+
 
 }

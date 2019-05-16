@@ -34,7 +34,7 @@ public class SideBarController implements Initializable {
         // @todo - permission checks for navigation menu
         uiProjectsBtn.setOnMousePressed( ev -> {
             if( !checkPageInitied( PIDProjects ) ){
-                Popup.show();
+                Popup.showLoader();
                 Thread load = new Thread( () -> {
                     ProjectsPage projectsPage = new ProjectsPage();
                     projectsPage.getController().setTitle("Projects"); // @todo language
@@ -50,7 +50,7 @@ public class SideBarController implements Initializable {
 
         uiProjectFormBtn.setOnMousePressed( ev -> {
             if( !checkPageInitied( PIDProjectForm ) ){
-                Popup.show();
+                Popup.showLoader();
                 Thread load = new Thread( () -> {
                     ProjectFormPage projectFormPage = new ProjectFormPage();
                     projectFormPage.getController().setTitle("New Project Form"); // @todo language
@@ -80,7 +80,7 @@ public class SideBarController implements Initializable {
         Platform.runLater( () -> {
             MainScreenController.CONTENT_CONTAINER.setContent(pageObject.getUI());
             activePage = pageID;
-            Popup.hide();
+            //Popup.hide();
         });
     }
 
