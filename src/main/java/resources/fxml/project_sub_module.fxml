@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="15.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <VBox alignment="CENTER" fillWidth="false">
+         <children>
+            <Label fx:id="uiTitle" text="Kitchen">
+               <styleClass>
+                  <String fx:value="lbl-gray" />
+                  <String fx:value="lbl-h3" />
+               </styleClass>
+            </Label>
+            <HBox>
+               <children>
+                  <Label text="Last updated:">
+                     <styleClass>
+                        <String fx:value="lbl-gray" />
+                        <String fx:value="lbl-small" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="uiTimestamp" layoutX="10.0" layoutY="10.0" text=" 11:49">
+                     <styleClass>
+                        <String fx:value="lbl-gray" />
+                        <String fx:value="lbl-small" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="uiImage" />
+      <HBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Button fx:id="uiEditBtn" mnemonicParsing="false" text="Edit">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PENCIL" />
+               </graphic>
+            </Button>
+            <Button fx:id="uiLogsBtn" mnemonicParsing="false" text="Logs">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HISTORY" />
+               </graphic>
+            </Button>
+            <Button fx:id="uiNotesBtn" mnemonicParsing="false" text="Notes">
+               <graphic>
+                  <FontAwesomeIconView glyphName="LIST" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
