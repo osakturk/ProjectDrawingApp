@@ -2,11 +2,8 @@ package ui;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -35,7 +32,6 @@ public class MainScreenController implements Initializable {
 
             SideBar sideBar = new SideBar();
             ContentContainer contentContainer = new ContentContainer();
-
             sideBar.initUI();
             contentContainer.initUI();
 
