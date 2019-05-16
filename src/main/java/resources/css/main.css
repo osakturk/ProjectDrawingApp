@@ -59,6 +59,14 @@
     -fx-font-size:9;
 }
 
+/* popup styles */
+.popup-overlay {
+    -fx-background-color:#000;
+    -fx-opacity: 0.3;
+
+}
+
+
 
 /* side bar styles */
 .sidebar{

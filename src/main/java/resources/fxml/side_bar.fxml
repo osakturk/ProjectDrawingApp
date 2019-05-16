@@ -30,20 +30,20 @@
                     </padding>
                     <children>
                         <FontAwesomeIconView glyphName="DASHBOARD" size="1.2em" styleClass="sidebar-btn-icon" />
-                        <Label text="PROJECTS" textFill="#b8b1b1">
+                        <Label fx:id="uiProjectsLabel" text="PROJECTS" textFill="#b8b1b1">
                             <HBox.margin>
                                 <Insets left="15.0" />
                             </HBox.margin>
                         </Label>
                     </children>
                 </HBox>
-                <HBox id="navEmployees" fx:id="uiNewProjectBtn" alignment="CENTER_LEFT" layoutX="10.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="sidebar-btn">
+                <HBox id="navEmployees" fx:id="uiProjectFormBtn" alignment="CENTER_LEFT" layoutX="10.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" styleClass="sidebar-btn">
                     <padding>
                         <Insets left="20.0" />
                     </padding>
                     <children>
                         <FontAwesomeIconView glyphName="PLUS" size="1.2em" styleClass="sidebar-btn-icon" />
-                        <Label text="NEW PROJECT" textFill="#b8b1b1">
+                        <Label fx:id="uiProjectFormLabel" text="NEW PROJECT" textFill="#b8b1b1">
                             <HBox.margin>
                                 <Insets left="15.0" />
                             </HBox.margin>
@@ -56,7 +56,7 @@
                     </padding>
                     <children>
                         <FontAwesomeIconView glyphName="LIST_OL" size="1.2em" styleClass="sidebar-btn-icon" />
-                        <Label text="LOGS" textFill="#b8b1b1">
+                        <Label fx:id="uiLogsLabel" text="LOGS" textFill="#b8b1b1">
 
                             <HBox.margin>
                                 <Insets left="15.0" />
