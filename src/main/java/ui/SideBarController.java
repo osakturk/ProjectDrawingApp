@@ -79,7 +79,7 @@ public class SideBarController implements Initializable {
         Platform.runLater( () -> {
             MainScreenController.CONTENT_CONTAINER.setContent(pageObject.getUI());
             activePage = pageID;
-            //Popup.hide();
+            Popup.hide();
         });
     }
 
