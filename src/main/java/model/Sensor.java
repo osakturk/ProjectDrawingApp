@@ -8,6 +8,9 @@ public class Sensor {
     private String level;
     private String label;
     private String description;
+    private String address;
+    private String loopNumber;
+    private String analogValue;
     private Date setTime;
     private double xLocation;
     private double yLocation;
@@ -84,5 +87,29 @@ public class Sensor {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getLoopNumber() {
+        return loopNumber;
+    }
+
+    public void setLoopNumber(String loopNumber) {
+        this.loopNumber = loopNumber;
+    }
+
+    public String getAnalogValue() {
+        return analogValue;
+    }
+
+    public void setAnalogValue(String analogValue) {
+        this.analogValue = analogValue;
     }
 }
