@@ -28,7 +28,10 @@ public class ProjectsPageController extends UIPageController implements Initiali
     public void initialize(URL url, ResourceBundle rb ){
 
 
+
+
         ProjectSubModule subModuleTest = new ProjectSubModule();
+        uiProjectViewerPane.setContent(subModuleTest.getUI());
 
 
 

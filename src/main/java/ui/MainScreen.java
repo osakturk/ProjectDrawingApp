@@ -19,7 +19,7 @@ public class MainScreen extends Application {
 
 
             //Map<String, Double> resData = Common.calculateAppWindowSize();
-            primaryStage.setScene(new Scene(content, 1280, 1024 ));
+            primaryStage.setScene(new Scene(content, 1280, 1024 )); // @todo - calculate client's width-height, give offset to that
 
             //stage.getIcons().add(new Image(getClass().getResource("/gpts/res/img/gpts_ico.png").toExternalForm()));
             primaryStage.show();
