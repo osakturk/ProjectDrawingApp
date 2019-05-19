@@ -6,11 +6,10 @@ import java.util.List;
 public class Project {
     private Long   id;
     private String name;
-
-
     private Date   createDate;
     private Integer status;
-    private List<Sensor> sensorList;
+    private List<Loop> loops;
+    private byte[] xmlFile;
     private byte[] planImage;
 
     public Long getId() {
@@ -45,12 +44,20 @@ public class Project {
         this.status = status;
     }
 
-    public List<Sensor> getSensorList() {
-        return sensorList;
+    public List<Loop> getLoops() {
+        return loops;
     }
 
-    public void setSensorList(List<Sensor> sensorList) {
-        this.sensorList = sensorList;
+    public void setLoops(List<Loop> loops) {
+        this.loops = loops;
+    }
+
+    public byte[] getXmlFile() {
+        return xmlFile;
+    }
+
+    public void setXmlFile(byte[] xmlFile) {
+        this.xmlFile = xmlFile;
     }
 
     public byte[] getPlanImage() {
