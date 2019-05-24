@@ -32,7 +32,7 @@ public class ProjectRepository extends BaseRepository {
         return projectList;
     }
 
-    public Project getSpecificProject(Long id){
+    /*public Project getSpecificProject(Long id){
         Project project = new Project();
         ArrayList<Object> parameters = new ArrayList<>();
         this.setQuery("select * from Projects where status = ? and id = ?");
@@ -73,7 +73,7 @@ public class ProjectRepository extends BaseRepository {
             this.cleanResources();
         }
         return project;
-    }
+    }*/
 
     public boolean deleteProject(Long id){
         ArrayList<Object> parameters = new ArrayList<>();
