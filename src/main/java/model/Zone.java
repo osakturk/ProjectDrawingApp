@@ -19,4 +19,12 @@ public class Zone {
     public void setZoneInfo(String zoneInfo) {
         this.zoneInfo = zoneInfo;
     }
+
+    @Override
+    public String toString() {
+        return "Zone{" +
+                "zoneNo='" + zoneNo + '\'' +
+                ", zoneInfo='" + zoneInfo + '\'' +
+                '}';
+    }
 }
