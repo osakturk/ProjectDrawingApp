@@ -14,7 +14,7 @@ public class ZoneRepository {
         List<Zone> zones = new ArrayList<>();
 
 //        NodeList nodeList = doc.getElementsByTagName("zones");
-        NodeList nodeList = XmlProvider.getNodeList("LOCATION_OF_XML_FILE", "zones");
+        NodeList nodeList = XmlProvider.getNodeList("LOCATION_OF_XML_FILE", "zone");
         System.out.println("----------------------------");
 
         for (int i = 0; i < nodeList.getLength(); i++) {
