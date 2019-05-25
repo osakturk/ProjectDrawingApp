@@ -8,7 +8,7 @@ public class Project {
     private String name;
     private Date   createDate;
     private Integer status;
-    private List<Loop> loops;
+    private List<Panel> panelList;
     private byte[] xmlFile;
     private byte[] planImage;
 
@@ -44,12 +44,12 @@ public class Project {
         this.status = status;
     }
 
-    public List<Loop> getLoops() {
-        return loops;
+    public List<Panel> getPanelList() {
+        return panelList;
     }
 
-    public void setLoops(List<Loop> loops) {
-        this.loops = loops;
+    public void setPanelList(List<Panel> panelList) {
+        this.panelList = panelList;
     }
 
     public byte[] getXmlFile() {
