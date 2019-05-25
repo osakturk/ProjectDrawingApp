@@ -101,4 +101,15 @@ public class Point {
     public void setZoneInfo(String zoneInfo) {
         this.zoneInfo = zoneInfo;
     }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                ", address='" + address + '\'' +
+                ", label='" + label + '\'' +
+                ", loop='" + loop + '\'' +
+                ", deviceType='" + deviceType + '\'' +
+                ", zoneInfo='" + zoneInfo + '\'' +
+                '}';
+    }
 }
