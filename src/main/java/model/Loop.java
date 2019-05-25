@@ -39,4 +39,12 @@ public class Loop {
     public void setPoints(List<Point> points) {
         this.points = points;
     }
+
+    @Override
+    public String toString() {
+        return "Loop{" +
+                "loopNumber='" + loopNumber + '\'' +
+                ", points=" + points +
+                '}';
+    }
 }
