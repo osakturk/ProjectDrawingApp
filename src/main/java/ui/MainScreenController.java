@@ -20,7 +20,9 @@ public class MainScreenController implements Initializable {
     @FXML private VBox uiPopupOverlay;
     @FXML private VBox uiPopup;
 
-    private AnchorPane uiSideBar;
+    //private AnchorPane uiSideBar;
+    private AnchorPane uiTopBar;
+    private AnchorPane uiAlarmBar;
     public static ScrollPane CONTENT_CONTAINER;
     public static StackPane WRAPPER;
 
@@ -30,24 +32,33 @@ public class MainScreenController implements Initializable {
     public void initialize(URL url, ResourceBundle rb ){
         try {
 
-            SideBar sideBar = new SideBar();
+            //SideBar sideBar = new SideBar();
+            TopBar topBar = new TopBar();
+            AlarmBar alarmBar = new AlarmBar();
             ContentContainer contentContainer = new ContentContainer();
-            sideBar.initUI();
+            topBar.initUI();
+            alarmBar.initUI();
             contentContainer.initUI();
 
-            uiSideBar = (AnchorPane)sideBar.getUI();
+            uiTopBar = (AnchorPane)topBar.getUI();
+            uiAlarmBar = (AnchorPane)alarmBar.getUI();
             CONTENT_CONTAINER = (ScrollPane)contentContainer.getUI();
             WRAPPER = uiWrapper;
 
-            uiContentWrapper.getChildren().add( uiSideBar );
-            AnchorPane.setLeftAnchor(uiSideBar, 0.0);
-            AnchorPane.setTopAnchor(uiSideBar, 0.0);
-            AnchorPane.setBottomAnchor(uiSideBar, 0.0);
+            uiContentWrapper.getChildren().add( uiTopBar );
+            AnchorPane.setLeftAnchor(uiTopBar, 0.0);
+            AnchorPane.setTopAnchor(uiTopBar, 0.0);
+            AnchorPane.setRightAnchor(uiTopBar, 0.0);
+
+            uiContentWrapper.getChildren().add( uiAlarmBar );
+            AnchorPane.setLeftAnchor(uiAlarmBar, 0.0);
+            AnchorPane.setTopAnchor(uiAlarmBar, 80.0);
+            AnchorPane.setRightAnchor(uiAlarmBar, 0.0);
 
             uiContentWrapper.getChildren().add( CONTENT_CONTAINER );
-            AnchorPane.setLeftAnchor(CONTENT_CONTAINER, 220.0);
+            AnchorPane.setLeftAnchor(CONTENT_CONTAINER, 0.0);
             AnchorPane.setRightAnchor(CONTENT_CONTAINER, 0.0);
-            AnchorPane.setTopAnchor(CONTENT_CONTAINER, 0.0);
+            AnchorPane.setTopAnchor(CONTENT_CONTAINER, 150.0);
             AnchorPane.setBottomAnchor(CONTENT_CONTAINER, 0.0);
 
             // initalize popup
@@ -62,12 +73,12 @@ public class MainScreenController implements Initializable {
 
     // @todo - debounce the event ??
     public void screenResizeAction(){
-        uiContentWrapper.getScene().heightProperty().addListener(new ChangeListener<Number>() {
+        /*uiContentWrapper.getScene().heightProperty().addListener(new ChangeListener<Number>() {
             @Override public void changed(ObservableValue<? extends Number> observableValue, Number oldSceneHeight, Number newSceneHeight) {
 
                 uiSideBar.setStyle("-fx-pref-height:" + (newSceneHeight.doubleValue()) );
             }
-        });
+        });*/
     }
 
 }

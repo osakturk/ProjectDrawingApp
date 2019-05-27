@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="uiWrapper" minWidth="600.0" styleClass="no-blue-border" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainScreenController">
+<StackPane fx:id="uiWrapper" minWidth="600.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainScreenController">
     <children>
       <VBox fx:id="uiPopupOverlay" alignment="CENTER" styleClass="popup-overlay">
          <children>
@@ -18,4 +19,8 @@
             </content>
         </ScrollPane>
     </children>
+   <styleClass>
+      <String fx:value="no-blue-border" />
+      <String fx:value="main-wrapper" />
+   </styleClass>
 </StackPane>
