@@ -1,13 +1,15 @@
 package ui;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import ui.blocks.AlarmBar;
+import ui.blocks.ContentContainer;
+import ui.blocks.TopBar;
+import ui.popup.Popup;
 
 import java.net.URL;
 import java.util.ResourceBundle;
