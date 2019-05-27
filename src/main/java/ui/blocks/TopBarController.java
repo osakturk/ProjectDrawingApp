@@ -23,11 +23,6 @@ public class TopBarController implements Initializable {
     @FXML private Button uiNewProjectBtn;
     @FXML private Button uiSettingsBtn;
 
-    @FXML private Button uiBackBtn;
-    @FXML private Button uiForwardBtn;
-    @FXML private Button uiHomeBtn;
-    @FXML private Button uiZoomInBtn;
-    @FXML private Button uiZoomOutBtn;
 
     private int PIDProjects = 1,
                 PIDProjectForm = 2,
@@ -38,10 +33,6 @@ public class TopBarController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb ){
-
-
-        Tooltip tt = new Tooltip("Test");
-        uiBackBtn.setTooltip(tt);
 
 
         uiNewProjectBtn.setOnMousePressed( ev -> {

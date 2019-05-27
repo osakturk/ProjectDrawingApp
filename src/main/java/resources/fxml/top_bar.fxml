@@ -15,35 +15,6 @@
             <Label fx:id="uiVersionLabel" styleClass="lbl-small" text="v.1.0.0 alpha" textFill="#516764" />
          </children>
       </VBox>
-      <HBox alignment="CENTER" prefHeight="80.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Button fx:id="uiBackBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
-               <graphic>
-                  <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" styleClass="icon" />
-               </graphic>
-            </Button>
-            <Button fx:id="uiHomeBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
-               <graphic>
-                  <FontAwesomeIconView glyphName="HOME" size="20" styleClass="icon" />
-               </graphic>
-            </Button>
-            <Button fx:id="uiForwardBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
-               <graphic>
-                  <FontAwesomeIconView glyphName="ARROW_RIGHT" size="20" styleClass="icon" />
-               </graphic>
-            </Button>
-            <Button fx:id="uiZoomInBtn" contentDisplay="GRAPHIC_ONLY" layoutX="557.0" layoutY="30.0" mnemonicParsing="false" styleClass="nav-btn">
-               <graphic>
-                  <FontAwesomeIconView glyphName="SEARCH_PLUS" size="20" styleClass="icon" />
-               </graphic>
-            </Button>
-            <Button fx:id="uiZoomOutBtn" contentDisplay="GRAPHIC_ONLY" layoutX="585.0" layoutY="30.0" mnemonicParsing="false" styleClass="nav-btn">
-               <graphic>
-                  <FontAwesomeIconView glyphName="SEARCH_MINUS" size="20" styleClass="icon" />
-               </graphic>
-            </Button>
-         </children>
-      </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="80.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button fx:id="uiProjectsBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
