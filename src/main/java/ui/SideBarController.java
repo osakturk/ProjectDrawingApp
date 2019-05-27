@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+@Deprecated
 public class SideBarController implements Initializable {
 
     @FXML private HBox uiProjectsBtn;

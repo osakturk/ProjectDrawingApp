@@ -1,5 +1,6 @@
 package ui;
 
+@Deprecated
 public class SideBar extends UIComponent{
 
 
