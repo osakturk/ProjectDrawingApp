@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -21,24 +25,28 @@
             <Insets bottom="25.0" />
          </VBox.margin>
       </Label>
-      <BorderPane prefHeight="200.0" prefWidth="200.0">
+      <BorderPane styleClass="pce-wrapper">
          <center>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ScrollPane pannable="true" prefHeight="768.0" prefWidth="1024.0" styleClass="pce-workspace" BorderPane.alignment="CENTER">
+               <content>
+                  <AnchorPane prefHeight="2000.0" prefWidth="2000.0" />
+               </content>
+            </ScrollPane>
          </center>
          <right>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox BorderPane.alignment="CENTER">
                <children>
-                  <TitledPane animated="false" text="untitled">
+                  <TitledPane animated="false" styleClass="s1" text="Zones">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </content>
                   </TitledPane>
-                  <TitledPane animated="false" text="untitled">
+                  <TitledPane animated="false" styleClass="s1" text="Nodes">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </content>
                   </TitledPane>
-                  <TitledPane animated="false" text="untitled">
+                  <TitledPane animated="false" styleClass="s1" text="Points">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                     </content>
@@ -47,10 +55,148 @@
             </VBox>
          </right>
          <top>
-            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <HBox alignment="CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="829.0" layoutY="10.0">
+                     <children>
+                        <Button fx:id="uiBackBtn111" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#171488" glyphName="UPLOAD" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiHomeBtn111" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#246780" glyphName="GEAR" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiHomeBtn1111" contentDisplay="GRAPHIC_ONLY" layoutX="45.0" layoutY="10.0" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#226913" glyphName="SAVE" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="uiBackBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiHomeBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="HOME" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiForwardBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="ARROW_RIGHT" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiZoomInBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SEARCH_PLUS" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiZoomOutBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SEARCH_MINUS" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="587.0" layoutY="10.0">
+                     <children>
+                        <Button fx:id="uiBackBtn1" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#595959" glyphName="PENCIL" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiHomeBtn1" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#595959" glyphName="FONT" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiForwardBtn1" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#595959" glyphName="IMAGE" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="765.0" layoutY="10.0">
+                     <children>
+                        <Button fx:id="uiForwardBtn11" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#b70000" glyphName="TRASH" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding></HBox>
          </top>
          <left>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane animated="false" prefWidth="250.0" styleClass="s1" text="Properties">
+                     <content>
+                        <VBox spacing="25.0">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label styleClass="pce-prop-label" text="Name" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" text="Select" />
+                                          <Label styleClass="pce-prop-label" text="XML Data" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" text="Select" />
+                                          <Label styleClass="pce-prop-label" text="Linked" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label styleClass="pce-prop-label" text="Text" />
+                                          <TextField />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox layoutX="20.0" layoutY="20.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" text="Select" />
+                                          <Label styleClass="pce-prop-label" text="Image" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="10.0" styleClass="s1" text="Layers">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </TitledPane>
+               </children></VBox>
          </left>
       </BorderPane>
    </children>

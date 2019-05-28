@@ -222,3 +222,20 @@
 .sensor .icon {
 
 }
+
+.pce-wrapper .titled-pane {
+    -fx-pref-width:250;
+
+}
+
+/* Project Canvas styles */
+.pce-workspace {
+    -fx-background-color:#323537;
+}
+.pce-prop-label {
+    -fx-pref-width:60;
+    -fx-font-weight:none;
+    -fx-text-fill: #d3d3d3;
+    -fx-font-size:11;
+}
+
