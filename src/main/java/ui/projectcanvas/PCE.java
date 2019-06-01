@@ -1,6 +1,8 @@
 package ui.projectcanvas;
 
-public class PCE {
+import ui.UIComponent;
+
+public class PCE extends UIComponent {
 
     public PCE(){
 
