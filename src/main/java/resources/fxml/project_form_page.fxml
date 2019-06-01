@@ -175,6 +175,20 @@
                                           <TextField />
                                        </children>
                                     </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0">
+                                       <children>
+                                          <Button mnemonicParsing="false">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="PLUS" />
+                                             </graphic>
+                                          </Button>
+                                          <Button layoutX="98.0" layoutY="10.0" mnemonicParsing="false">
+                                             <graphic>
+                                                <FontAwesomeIconView glyphName="MINUS" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
                                  </children>
                               </VBox>
                               <VBox layoutX="20.0" layoutY="20.0" spacing="10.0">
