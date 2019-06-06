@@ -120,13 +120,56 @@
     -fx-fill: #b8b1b1;
 }
 
+/* Top-Bar styles */
+.top-bar {
+    -fx-background-color:#232a2e;
+}
+.top-bar .nav-btn {
+    -fx-pref-width:40;
+    -fx-pref-height:40;
+    -fx-background-color:#52656e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 2, 2);
+}
+.top-bar .nav-btn:hover {
+    -fx-background-color: #5f7780;
+}
+.top-bar .nav-btn:pressed .icon {
+    -fx-fill: #000000;
+}
+.top-bar .nav-btn .icon {
+    -fx-fill:#1a2025;
+}
 
-/* Content controller styles */
-.content-container {
+/* Alarm-Bar styles */
+.alarm-bar{
+    -fx-background-color:transparent;
+
+}
+.alarm-bar .content {
+    -fx-background-color:#242b2f;
+    -fx-background-radius:0 0 4 4;
+    -fx-border-color: radial-gradient(center 50% 0%, radius 50%, #34c3d4, #242b2f);
+    -fx-border-width:1 0 0 0 ;
+
+}
+
+
+/* Main wrapper */
+.main-wrapper {
     -fx-background-color:   linear-gradient(#0a1015 0%, #1f2429 20%, #191d22 100%),
     linear-gradient(#0a1015, #191d22),
     radial-gradient(center 50% 0%, radius 100%, rgba(35, 44, 47, 0.9), rgba(255,255,255,0));
+    /*-fx-padding:10;*/
+}
+
+
+/* Content controller styles */
+.content-container {
+    /*-fx-background-color:   linear-gradient(#0a1015 0%, #1f2429 20%, #191d22 100%),
+    linear-gradient(#0a1015, #191d22),
+    radial-gradient(center 50% 0%, radius 100%, rgba(35, 44, 47, 0.9), rgba(255,255,255,0));*/
     -fx-padding:10;
+    -fx-background-color: transparent;
 }
 
 .content-container .title {
@@ -179,3 +222,20 @@
 .sensor .icon {
 
 }
+
+.pce-wrapper .titled-pane {
+    -fx-pref-width:250;
+
+}
+
+/* Project Canvas styles */
+.pce-workspace {
+    -fx-background-color:#323537;
+}
+.pce-prop-label {
+    -fx-pref-width:60;
+    -fx-font-weight:none;
+    -fx-text-fill: #d3d3d3;
+    -fx-font-size:11;
+}
+

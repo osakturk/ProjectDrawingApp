@@ -1,4 +1,4 @@
-package ui;
+package ui.page;
 
 public class ProjectFormPage extends UIPage {
 

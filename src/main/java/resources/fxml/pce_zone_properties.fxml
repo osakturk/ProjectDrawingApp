@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.projectcanvas.PCEZonePropertiesController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <Label fx:id="uiNameLabel" styleClass="pce-prop-label" text="Name" />
+            <TextField fx:id="uiNameInput" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button fx:id="uiXMLDataBtn" mnemonicParsing="false" text="Select" />
+            <Label fx:id="uiXMLDataLabel" styleClass="pce-prop-label" text="N / A" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button fx:id="uiLinkBtn" mnemonicParsing="false" text="Select" />
+            <Label fx:id="uiLinkLabel" styleClass="pce-prop-label" text="N / A" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

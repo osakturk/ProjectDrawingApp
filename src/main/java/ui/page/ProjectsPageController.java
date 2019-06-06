@@ -1,4 +1,4 @@
-package ui;
+package ui.page;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.FlowPane;
+import ui.ProjectSubModule;
 
 import java.net.URL;
 import java.util.ResourceBundle;

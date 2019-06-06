@@ -1,53 +1,41 @@
-package ui;
+package ui.blocks;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.Tooltip;
+import ui.MainScreenController;
+import ui.page.UIPage;
+import ui.page.ProjectFormPage;
+import ui.popup.Popup;
 
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-public class SideBarController implements Initializable {
+public class TopBarController implements Initializable {
 
-    @FXML private HBox uiProjectsBtn;
-    @FXML private HBox uiProjectFormBtn;
-    @FXML private HBox uiLogsBtn;
+    @FXML private Label uiVersionLabel;
+    @FXML private Button uiProjectsBtn;
+    @FXML private Button uiNewProjectBtn;
+    @FXML private Button uiSettingsBtn;
 
-    @FXML private Label uiProjectLabel;
-    @FXML private Label uiProjectFormLabel;
-    @FXML private Label uiLogsLabel;
 
     private int PIDProjects = 1,
                 PIDProjectForm = 2,
-                PIDLogsForm = 3;
+                PIDSettings = 3;
     private int activePage = 0;
     private Map<Integer, UIPage> pagesCached = new HashMap<>();
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb ){
 
-        // @todo - permission checks for navigation menu
-        uiProjectsBtn.setOnMousePressed( ev -> {
-            if( !checkPageInitied( PIDProjects ) ){
-                Popup.showLoader();
-                Thread load = new Thread( () -> {
-                    ProjectsPage projectsPage = new ProjectsPage();
-                    projectsPage.getController().setTitle("Projects"); // @todo language
-                    pagesCached.put(PIDProjects, projectsPage);
-                    loadPage(PIDProjects, projectsPage);
-                });
-                load.setDaemon(true);
-                load.start();
-            } else {
-                loadPageFromCache( PIDProjects );
-            }
-        });
 
-        uiProjectFormBtn.setOnMousePressed( ev -> {
+        uiNewProjectBtn.setOnMousePressed( ev -> {
             if( !checkPageInitied( PIDProjectForm ) ){
                 Popup.showLoader();
                 Thread load = new Thread( () -> {
@@ -63,7 +51,9 @@ public class SideBarController implements Initializable {
             }
         });
 
+
     }
+
 
     private boolean checkPageInitied( int pageID ){
         return pagesCached.containsKey(pageID);

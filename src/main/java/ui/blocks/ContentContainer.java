@@ -1,4 +1,6 @@
-package ui;
+package ui.blocks;
+
+import ui.UIComponent;
 
 public class ContentContainer extends UIComponent {
 

@@ -1,9 +1,10 @@
-package ui;
+package ui.popup;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
+import ui.MainScreenController;
 
 public class Popup {
 

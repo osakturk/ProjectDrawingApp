@@ -1,4 +1,6 @@
-package ui;
+package ui.popup;
+
+import ui.UIComponent;
 
 public class PopupLoaderContent extends UIComponent {
 

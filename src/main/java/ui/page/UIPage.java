@@ -1,5 +1,7 @@
-package ui;
+package ui.page;
 
+
+import ui.UICommon;
 
 public class UIPage extends UICommon {
 
