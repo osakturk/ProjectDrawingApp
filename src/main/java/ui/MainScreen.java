@@ -24,13 +24,16 @@ public class MainScreen extends Application {
             primaryStage.setTitle("Project Drawing App");
 
 
+
+
             Timeline timeline = new Timeline(new KeyFrame(
                     Duration.millis(2500),
                     ae -> System.out.println("CUF CUF")));
             timeline.setCycleCount(Animation.INDEFINITE);
             timeline.play();
 
-            /** we should define new properties for live sensor data
+            /** first of all we must read serial port data in runnable method
+             * we should define new properties for live sensor data
              * you can get all sensor data from here
              *  we can set some sensor for live data
              *  you can listen from there
