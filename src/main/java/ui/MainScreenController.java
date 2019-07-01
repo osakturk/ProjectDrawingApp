@@ -28,8 +28,6 @@ public class MainScreenController implements Initializable {
     public static ScrollPane CONTENT_CONTAINER;
     public static StackPane WRAPPER;
 
-
-
     @Override
     public void initialize(URL url, ResourceBundle rb ){
         try {
@@ -66,7 +64,6 @@ public class MainScreenController implements Initializable {
             // initalize popup
             Popup.initialize( uiPopupOverlay, uiPopup );
 
-
         } catch( Exception e ){
             e.printStackTrace();
         }
@@ -75,12 +72,7 @@ public class MainScreenController implements Initializable {
 
     // @todo - debounce the event ??
     public void screenResizeAction(){
-        /*uiContentWrapper.getScene().heightProperty().addListener(new ChangeListener<Number>() {
-            @Override public void changed(ObservableValue<? extends Number> observableValue, Number oldSceneHeight, Number newSceneHeight) {
 
-                uiSideBar.setStyle("-fx-pref-height:" + (newSceneHeight.doubleValue()) );
-            }
-        });*/
     }
 
 }

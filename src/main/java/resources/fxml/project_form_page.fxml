@@ -28,7 +28,7 @@
          <center>
             <ScrollPane pannable="true" prefHeight="768.0" prefWidth="1024.0" styleClass="pce-workspace" BorderPane.alignment="CENTER">
                <content>
-                  <AnchorPane prefHeight="2000.0" prefWidth="2000.0" />
+                  <AnchorPane fx:id="uiWorkSpace" prefHeight="2000.0" prefWidth="2000.0" />
                </content>
             </ScrollPane>
          </center>
@@ -59,6 +59,11 @@
                   <HBox layoutX="829.0" layoutY="10.0">
                      <children>
                         <Button fx:id="uiLoadXMLBtn" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" styleClass="nav-btn">
+                           <graphic>
+                              <FontAwesomeIconView fill="#171488" glyphName="ALIGN_CENTER" size="20" styleClass="icon" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="uiUploadBackground" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="nav-btn">
                            <graphic>
                               <FontAwesomeIconView fill="#171488" glyphName="UPLOAD" size="20" styleClass="icon" />
                            </graphic>
